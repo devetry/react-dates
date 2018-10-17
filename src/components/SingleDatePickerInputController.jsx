@@ -135,13 +135,13 @@ export default class SingleDatePickerInputController extends BaseClass {
 
     const isValid = newDate && !isOutsideRange(newDate);
     if (isValid) {
-      onDateChange(newDate);
+      onDateChange(newDate, dateString);
       if (!keepOpenOnDateSelect) {
         onFocusChange({ focused: false });
         onClose({ date: newDate });
       }
     } else {
-      onDateChange(null);
+      onDateChange(null, dateString);
     }
   }
 

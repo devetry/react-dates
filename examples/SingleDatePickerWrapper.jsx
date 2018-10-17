@@ -84,14 +84,15 @@ class SingleDatePickerWrapper extends React.Component {
     this.state = {
       focused: props.autoFocus,
       date: props.initialDate,
+      input: ''
     };
 
     this.onDateChange = this.onDateChange.bind(this);
     this.onFocusChange = this.onFocusChange.bind(this);
   }
 
-  onDateChange(date) {
-    this.setState({ date });
+  onDateChange(date, input) {
+    this.setState({ date, input });
   }
 
   onFocusChange({ focused }) {
