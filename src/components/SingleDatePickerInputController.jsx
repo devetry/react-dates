@@ -124,6 +124,7 @@ export default class SingleDatePickerInputController extends BaseClass {
   }
 
   onChange(dateString) {
+    console.log('changed');
     const {
       isOutsideRange,
       keepOpenOnDateSelect,
